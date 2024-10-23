@@ -1,21 +1,26 @@
 # Wireframes
-
-Reference the Creating an Entity Relationship Diagram final project guide in the course portal for more information about how to complete this deliverable.
+Wire Frames for Scorecast App
 
 ## List of Pages
+- Landing Page ⭐
+- News Feed Page ⭐
+- Pickup Game Organizer Page ⭐
+- Login Page ⭐
+- SignUp Page ⭐
+- Data Visualizations / Machine Learning Match Predictor Page
 
-[👉🏾👉🏾👉🏾 List the pages you expect to have in your app, with a ⭐ next to pages you have wireframed]
-
-## Wireframe 1: [page title]
-
+## Wireframe 1: Landing Page
 [👉🏾👉🏾👉🏾 include wireframe 1]
 
-## Wireframe 2: [page title]
-
+## Wireframe 2: News Feed Page
 [👉🏾👉🏾👉🏾 include wireframe 2]
 
-## Wireframe 3: [page title]
-
+## Wireframe 3: Pickup Game Organizer Page
 [👉🏾👉🏾👉🏾 include wireframe 3]
 
-[👉🏾👉🏾👉🏾 include more wireframes as desired]
+## Wireframe 4: Login Page
+[👉🏾👉🏾👉🏾 include wireframe 4]
+
+## Wireframe 5: SignUp Page
+[👉🏾👉🏾👉🏾 include wireframe 5]
+
