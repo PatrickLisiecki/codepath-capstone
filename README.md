@@ -47,6 +47,7 @@ The inspiration behind this app is to give bettors a competitive edge when decid
 ## Video Demo
 
 ## Container Diagram
+<img width="1425" alt="Screenshot 2024-10-22 at 11 03 05 PM" src="https://github.com/user-attachments/assets/13bd92e9-60a2-429c-931e-de9f2ad761f9">
 
 
 ## Installation Instructions
