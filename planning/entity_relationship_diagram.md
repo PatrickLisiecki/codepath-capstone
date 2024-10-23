@@ -9,6 +9,8 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 ## Add the Entity Relationship Diagram
 
 [👉🏾👉🏾👉🏾 Include an image or images of the diagram below. You may also wish to use the following markdown syntax to outline each table, as per your preference.]
+![Scorecast Entity Relation Diagram](./scorecast_erd.png "ERD")
+
 
 | Column Name | Type | Description |
 |-------------|------|-------------|
