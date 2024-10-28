@@ -2,11 +2,12 @@
     "name": "server",
     "version": "1.0.0",
     "main": "server.js",
+    "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node src/server.js",
         "dev": "nodemon src/server.js",
-        "reset": "cd config && node reset.js"
+        "reset": "cd src/config && node reset.js"
     },
     "keywords": [],
     "author": "",
