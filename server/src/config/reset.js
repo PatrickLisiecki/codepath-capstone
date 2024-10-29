@@ -1,4 +1,4 @@
-import { pool } from "./database";
+import { pool } from "./database.js";
 
 const createUsersTable = async () => {
     const createUsersTableQuery = `
@@ -32,5 +32,5 @@ async function deleteUsersTable() {
     }
 }
 
-// await createUsersTable();
-await deleteUsersTable();
+await createUsersTable();
+// await deleteUsersTable();
