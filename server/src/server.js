@@ -6,7 +6,7 @@ import passport from "passport";
 
 import { Google } from "./config/auth.js";
 
-import authRoutes from "./routes/auth.js";
+import authRoutes from "./routes/authRouter.js";
 
 dotenv.config();
 

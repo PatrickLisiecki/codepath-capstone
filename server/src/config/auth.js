@@ -1,6 +1,8 @@
 import GoogleStrategy from "passport-google-oauth2";
-import "./dotenv.js";
+import dotenv from "dotenv";
 import { pool } from "./database.js";
+
+dotenv.config();
 
 const options = {
     clientID: process.env.GOOGLE_CLIENT_ID,
