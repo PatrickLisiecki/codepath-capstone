@@ -31,7 +31,7 @@ const GoogleLogin = () => {
                     ></path>
                 </svg>
             </div>
-            <span className="text-google-text-gray text-sm tracking-wider">Sign in with Google</span>
+            <span className="text-sm tracking-wider text-google-text-gray">Sign in with Google</span>
         </button>
     );
 };

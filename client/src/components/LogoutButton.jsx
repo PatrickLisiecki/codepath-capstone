@@ -31,7 +31,7 @@ const LogoutButton = () => {
                     ></path>
                 </svg>
             </div>
-            <span className="text-google-text-gray text-sm tracking-wider">Logout</span>
+            <span className="text-sm tracking-wider text-google-text-gray">Logout</span>
         </button>
     );
 };

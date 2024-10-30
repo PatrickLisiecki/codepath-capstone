@@ -29,7 +29,7 @@ const LoginButton = () => {
                     ></path>
                 </svg>
             </div>
-            <span className="text-google-text-gray text-sm tracking-wider">Login</span>
+            <span className="text-sm tracking-wider text-google-text-gray">Login</span>
         </Link>
     );
 };
