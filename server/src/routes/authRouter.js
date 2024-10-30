@@ -10,36 +10,36 @@ router.get("/login/success", (req, res) => {
     }
 });
 
-router.get("/login/failed", (req, res) => {
+router.get("/login/failure", (req, res) => {
     res.status(401).json({ success: false, message: "failure" });
 });
 
 router.get("/logout", (req, res, next) => {
     req.logout((err) => {
         if (err) {
-            return next(error);
+            return next(err);
         }
-
         req.session.destroy((err) => {
+            if (err) {
+                return next(err);
+            }
             res.clearCookie("connect.sid");
-
-            res.json({ status: "logout", user: {} });
+            res.redirect(process.env.CLIENT_URL);
         });
     });
 });
 
-router.get("/google", passport.authenticate("google", { scope: "profile" }));
+router.get(
+    "/google",
+    passport.authenticate("google", { scope: ["profile", "email"] }),
+);
 
 router.get(
     "/google/callback",
     passport.authenticate("google", {
-        session: true,
         successRedirect: `${process.env.CLIENT_URL}`,
         failureRedirect: "/login/failure",
     }),
-    // (req, res) => {
-    //     res.redirect(`${process.env.CLIENT_URL}`);
-    // },
 );
 
 export default router;
