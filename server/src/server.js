@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import session from "express-session";
 import passport from "passport";
 
-import { Google } from "./config/auth.js";
+import configurePassport from "./config/passport.js";
 
 import authRoutes from "./routes/authRouter.js";
 
@@ -23,9 +23,9 @@ app.use(cors(corsOptions));
 
 app.use(
     session({
-        secret: [process.env.COOKIE_SECRET],
+        secret: process.env.COOKIE_SECRET,
         cookie: {
-            secure: process.env.NODE_ENV === "production" ? "true" : "auto",
+            secure: process.env.NODE_ENV === "production",
             sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
             maxAge: 3600000, // 1 hour
         },
@@ -37,18 +37,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(Google);
-
-passport.serializeUser((user, done) => {
-    done(null, user);
-});
-
-passport.deserializeUser((user, done) => {
-    done(null, user);
-});
+configurePassport(passport);
 
 // Routes
-// app.use("/api/v1", api);
 app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
