@@ -4,7 +4,7 @@ const createUsersTable = async () => {
     const createUsersTableQuery = `
         CREATE TABLE IF NOT EXISTS users (
             id serial PRIMARY KEY,
-            google_id integer NOT NULL,
+            google_id VARCHAR(50) NOT NULL,
             username varchar(100) NOT NULL,
             email varchar(255) NOT NULL,
             img varchar(500) NOT NULL
