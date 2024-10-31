@@ -8,7 +8,7 @@ function Fallback() {
                 <div className="flex-col">
                     <h1 className="text-3xl font-bold">404 - Page Not Found</h1>
                     <p className="text-lg py-2">The page you are looking for does not exist.</p>
-                    <Link to="/" className="font-bold text-xl text-blue-500">Soccer Cast</Link>
+                    <Link to="/" className="font-bold text-xl text-blue-500">PickUp NYC</Link>
                 </div>
             </div>
         </>
