@@ -4,28 +4,18 @@ Reference the Writing User Stories final project guide in the course portal for 
 
 ## User Roles
 
-### General User - Views games, statistics, and participates in games
-### Premium User - Views games, statistics, signs up for games, and has access to predictive modeling
-### Match Analyst - Records and analyzes game data, statistics, and performance metrics
+### General User - Views posts and pickups, likes and signs up for pickups
+### Paid User - Has access to paid games. 
 
 ## Draft User Stories
 
-1. As a General User, I want to view a list of upcoming games, so that I can join games.
-
-2. As a General User, I want to see team statistics for past matches, so that I can understand team performance.
-
-3. As a General User, I want to create and host local games, so that I can engage in local sports events.
-
-4. As a Premium User, I want access to predictive modeling for upcoming games, so that I can make informed decisions on match outcomes and team performances.
-
-5. As a Premium User, I want to sign up for organized games with other users, so that I can participate in sports activities easily.
-
-6. As a Premium User, I want to compare team statistics using advanced visualizations, so that I can analyze team strengths and weaknesses for predictions.
-
-7. As a Match Analyst, I want to view game data such as goals, possession, and shots during matches, so that I can develop performance metrics.
-
-8. As a Match Analyst, I want to review historical game statistics and trends, so that I can analyze past performance and predict future outcomes based on patterns.
-
-9. As a Match Analyst, I want to generate detailed reports on team and player performance, so that I can provide insights to coaches and teams for improvement.
-
-10. As a General User, I want to read relevant articles about teams and leagues, so that I can stay updated on the games I’m following.
+1. As a soccer enthusiast, I want to create a user account with my name and email so that I can access the PickupNYC community.
+2. As a player, I want to browse pickup games filtered by borough so that I can find matches convenient to my location.
+3. As a game organizer, I want to create a pickup game by setting the location, date, and time so that I can host matches in my neighborhood.
+4. As a soccer player, I want to create discussion threads about matches so that I can coordinate with other players about game details.
+5. As a community member, I want to like and comment on game posts so that I can engage with other players and show interest in attending.
+6. As a game host, I want to see a list of interested players through post interactions so that I can plan the game size appropriately.
+7. As a player, I want to view game locations on a map using latitude and longitude coordinates so that I can easily find the playing field.
+8. As a regular player, I want to track the history of games I've hosted so that I can build my reputation in the community.
+9. As a newcomer, I want to browse game-related threads by borough so that I can join discussions in my area and meet local players.
+10. As a player, I want to receive notifications about comments on games I'm interested in so that I can stay updated on any changes or important information.

@@ -1,4 +1,4 @@
-# Scorecast
+# PickupNYC
 
 **CodePath WEB103 Final Project**
 
@@ -10,15 +10,15 @@
 
 ### Description and Purpose
 
-This project is designed to analyze soccer teams' performance data, providing users with a detailed understanding of each team's strengths and weaknesses. By evaluating offensive metrics like goals, dangerous attacks, shots, and shots on target, the tool offers insights into a team's offensive capabilities, while defensive stats reveal areas of vulnerability.
+This project is designed to be a platform where users can create, edit, update, and delete posts for organizing local pickup soccer matches.
 
-The app will also feature a machine learning model that predicts Premier League match outcomes, such as Manchester City vs Arsenal, based on an external dataset.
+The app will also feature a forum for user interactions, and for viewing user posts and upcoming games.
 
-Additionally, it includes a news feed to keep users informed on the latest updates about teams and players, and a platform where users can create, edit, update, and delete posts for organizing local pickup soccer matches.
+Additionally, it includes a news feed to keep users informed on the latest updates about teams and players, and 
 
 ### Inspirations
 
-The inspiration behind this app is to give bettors a competitive edge when deciding on Premier League matchups, providing critical analysis and predictions to help them make informed decisions. By offering deep insights into team performance and outcomes, the app equips users with valuable data that enhances their chances of making successful bets.
+The inspiration behind this app is to foster an open and welcoming sports community by giving users access to local soccer pickup and sports events in their localities.
 
 ## Tech Stack
 
