@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 
 // TODO: Make responsive
-// TODO: Implement forget password logic
 // TODO: Implement form submission logic
 
 function Signin() {
@@ -19,7 +18,7 @@ function Signin() {
                 <div className="absolute inset-44 container mx-auto border-2 bg-white md:w-2/5 md:h-3/5 lg:w-80 lg:h-2/5 xl:w-1/4 xl:h-1/2 rounded-lg shadow-xl">
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="text-center text-2xl font-semibold p-3 pb-1 mb-1">Sign In</h1>
-                        <p className="mb-2">Welcome to <span className="text-blue-500 inline font-bold">Soccer Cast.</span></p>
+                        <p className="mb-2">Welcome to <span className="text-blue-500 inline font-bold">PickUp NYC.</span></p>
                     
                         <div className="mb-4">
                             <label htmlFor="username" className="block text-gray-800 font-bold text-sm">
