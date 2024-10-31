@@ -2,14 +2,21 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 
-// TODO: Add email and password validation (regex pattern)
 // TODO: Make responsive
-// TODO: Implement forget password logic
 // TODO: Implement form submission logic
 
 function Signup() {
     const [passVisible, setPassVisible] = useState(false);
     const [passVisible2, setPassVisible2] = useState(false);
+
+    const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState('');
+
+    const [password, setPassword] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+
+    const [confrimPassword, setConfirmPassword] = useState('');
+    const [confrimPasswordError, setConfirmPasswordError] = useState('');
 
     const toggle = () => {
         setPassVisible(!passVisible);
@@ -19,13 +26,71 @@ function Signup() {
         setPassVisible2(!passVisible2);
     }
 
+    const handleEmailChange = (e) => {
+        const value = e.target.value;
+        setEmail(value);
+        if (!validateEmail(value)) {
+            setEmailError('Invalid email format');
+        } else {
+            setEmailError('');
+        }
+    }
+
+    const handlePasswordChange = (e) => {
+        const value = e.target.value;
+        setPassword(value);
+
+        if (!validatePassword(value)) {
+            setPasswordError('Invalid Password format');
+        } else {
+            setPasswordError('');
+        }
+    }
+
+    const handleConfirmPasswordChange = (e) => {
+        const value = e.target.value;
+        setConfirmPassword(value);
+
+        if (value !== password) {
+            setConfirmPasswordError('Passwords do not match');
+        } else {
+            setConfirmPasswordError('');
+        }
+    }
+
+    const validateEmail = (email) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          )
+    }
+
+    const validatePassword = (password) => {
+        return String(password)
+        .match(
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+        )
+    }
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!emailError && !passwordError && !confirmPasswordError && email && password && confirmPassword) {
+            // TODO: Implement form submission logic (e.g., API call)
+            alert('Form submitted');
+        } else {
+            alert('Please fix the errors before submitting');
+        }
+    }
+
     return (
         <>
             <main className="flex flex-col h-screen relative bg-purple-50">
                 <div className="absolute md:inset-32 inset-44 container mx-auto border-2 bg-white md:w-2/5 md:h-3/4 lg:w-80 lg:h-3/5 xl:w-1/4 xl:h-2/3 rounded-lg shadow-xl">
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="text-center text-2xl font-bold p-3 pb-1 mb-1">Sign Up</h1>
-                        <p className="mb-2">Welcome to <span className="text-blue-500 inline font-bold">Soccer Cast.</span></p>
+                        <p className="mb-2">Welcome to <span className="text-blue-500 inline font-bold">PickUp NYC.</span></p>
 
                         <div className="mb-4">
                             <label htmlFor="name" className="block text-gray-800 font-semibold text-sm">
@@ -47,8 +112,11 @@ function Signup() {
                                 placeholder="Example@gmail.com"
                                 type="email"
                                 name="username"
+                                value={email}
+                                onChange={handleEmailChange}
                                 className="block w-56 rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
                             />
+                            {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
                         </div>
 
                         <div className="mb-4 relative">
@@ -59,8 +127,11 @@ function Signup() {
                                 placeholder="Password"
                                 type={ (passVisible === false)? "password": "text"}
                                 name="passwd"
+                                value={password}
+                                onChange={handlePasswordChange}
                                 className="block w-56 rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
                             />
+                            {passwordError && <p className="text-red-500 text-sm mt-1">{passwordError}</p>}
 
                             <div className="text-xl absolute top-7 right-5">
                                 {
@@ -78,8 +149,11 @@ function Signup() {
                                 placeholder="Password"
                                 type={ (passVisible2 === false)? "password": "text"}
                                 name="re-passwd"
+                                value={confrimPassword}
+                                onChange={handleConfirmPasswordChange}
                                 className="block w-56 rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
                             />
+                            {confrimPasswordError && <p className="text-red-500 text-sm mt-1">{confrimPasswordError}</p>}
 
                             <div className="text-xl absolute top-7 right-5">
                                 {
